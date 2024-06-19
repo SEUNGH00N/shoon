@@ -1,0 +1,98 @@
+/* 사이드바 스타일 */
+.chatsidebar-container {
+  display: flex;
+  max-height: 1000px;
+  height: calc(300vh - 140px);
+  overflow-y: auto;
+  background-color: #ffffff;
+  border: none;
+}
+
+.loading-text {
+  margin-left: 15px;
+}
+
+.chatsidebar {
+  width: 300px;
+  max-width: 300px;
+  background-color: #f4f4f4;
+
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+/* 채팅 헤더*/
+.chat-heading {
+  margin-left: 15px;
+}
+
+
+.chat-room-item {
+  background-color: transparent;
+}
+
+.chat-room-name {
+  font-size: 18px;
+}
+
+/* 채팅방 */
+.chat-room-button {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* 채팅방 선택시 */
+.selected {
+  background-color: #e6e6e6;
+  border-radius: 10px;
+}
+
+.chat-room-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* 채팅 창 스타일 */
+.chat-window {
+  max-width: 900px;
+  flex-grow: 1;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  margin-left: 0px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.chat-open {
+  width: calc(100% - 320px);
+  /* 사이드바 너비 + 채팅창과의 간격 */
+}
+
+/* 전송 버튼 */
+.chatlist-form button {
+  padding: 10px 20px;
+  background-color: #103260;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+  margin-top: 10px;
+}
+
+/* 전송 버튼 호버 효과 */
+.chatlist-form button:hover {
+  filter: brightness(0.8) !important
+}
+
+/* 새로운 메시지 입력 폼 */
+.chatlist-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}

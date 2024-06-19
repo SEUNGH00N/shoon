@@ -1,0 +1,181 @@
+/* 모달 스타일 */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+  position: absolute;
+  top: -755px;
+  left: 500px
+}
+
+/* 대화창 컨테이너 */
+.chat-component {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+/* chat.css */
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-top: -15px;
+}
+
+.product-chat-imamge {
+  display: flex;
+  align-items: center;
+}
+
+.product-chat-imamge img.products-image {
+  width: 90px;
+  height: 90px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.product-chat-imamge .products-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.products-info h3,
+.products-info p {
+  margin: 0;
+  line-height: 2;
+
+}
+
+/* 대화 메시지 영역 */
+.chat-messages {
+  height: 520px;
+  max-height: 520px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.message-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.own-message {
+  flex-direction: row-reverse;
+}
+
+.other-message {
+  flex-direction: row;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.message-text {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 15px;
+  display: inline-block;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+
+.other-message .message-text {
+  background-color: #e6e6e6;
+}
+
+.own-message .message-text {
+  background-color: #204b80;
+  color: #fff;
+}
+
+/* 메시지 입력 폼 */
+.chat-form {
+  display: flex;
+}
+
+/* 메시지 입력 필드 */
+.chat-form input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+/* 전송 버튼 */
+.chat-form button {
+  padding: 10px 20px;
+  background-color: #103260;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+/* 전송 버튼 호버 효과 */
+.chat-form button:hover {
+  filter: brightness(0.8) !important
+}
+
+/* 새로운 메시지 입력 폼 */
+.chat-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.chat-button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  text-transform: none;
+  height: 48px;
+  width: 48px;
+  min-width: 48px;
+}
+
+.button .MuiButton-startIcon {
+  margin: 0;
+}
+
+.button:hover {
+  background-color: #103260 !important;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}

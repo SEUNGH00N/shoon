@@ -1,0 +1,47 @@
+/* searchkeyword.css */
+
+/* 검색기록 헤더 */
+.search-keyword-header {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+/* 검색기록 컨테이너 */
+.search-keyword-container {
+  max-width: 700px;
+  max-height: 600px;
+  height: 600px;
+  margin: 0;
+  padding: 20px;
+  border: 2px solid #162b9150;
+  border-radius: 5px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  margin-left: 265px;
+}
+
+/* 검색 기록 */
+.keyword-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* 삭제 버튼 */
+.delete-button {
+  background-color: #ff6666;
+  color: #ffffff;
+  border: none;
+  padding: 9px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.delete-button:hover {
+  filter: brightness(0.8)
+}

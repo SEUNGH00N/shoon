@@ -1,0 +1,246 @@
+/* myinfo.css */
+
+.myinfo-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 100px;
+  height: 500px;
+}
+
+.myinfo-header {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.myinfo-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.myinfo-sidebar {
+  width: 200px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.myinfo-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.myinfo-sidebar li {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.myinfo-sidebar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.myinfo-sidebar a:hover {
+  background-color: #1a252f;
+}
+
+.myinfo-container {
+  flex: 1;
+  padding: 0px;
+}
+
+.password-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 비밀번호를 입력해주세요 */
+.input-password {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 25px;
+}
+
+.password-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 50px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.myinfo-button {
+  appearance: none;
+  background-color: #103260;
+  border: 2px solid #103260;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  align-self: center;
+  font-size: 17px;
+  padding: 15px 20px;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  width: 32%;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.myinfo-button:hover {
+  color: #ffffff;
+  outline: 0;
+  box-shadow: 0 0 40px 40px #103260 inset, 0 0 5px 1px #103260;
+}
+
+.user-edit {
+  width: 500px;
+  max-width: 500px;
+  padding: 0px 250px 2px 270px;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid #2c3e50;
+}
+
+.save-button {
+  background-color: #103260;
+  color: #ffffff;
+  border: 2px solid #103260;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+  font-size: 17px;
+  padding: 15px 20px;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  width: 95%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.save-button:hover {
+  outline: 0;
+  box-shadow: 0 0 40px 40px #103260 inset, 0 0 5px 1px #103260;
+}
+
+.withdrawal-button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 400px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.withdrawal-button:hover {
+  color: #e74c3c;
+}
+
+.withdrawal-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.withdrawal-title {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.withdrawal-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.modal-button-groupP {
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirm-button,
+.cancel-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.confirm-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.confirm-button:hover {
+  background-color: #c0392b;
+}
+
+.cancel-button {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #7f8c8d;
+}
+
+.changepw-header {
+  font-size: 40px;
+  margin-top: 70px;
+  text-align: center;
+}
+
+.changepw-container {
+  max-width: 500px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.changepw {
+  background-color: #103260;
+  color: #ffffff;
+  border: 2px solid #103260;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+  font-size: 17px;
+  padding: 15px 20px;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  width: 95%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.changepw:hover {
+  outline: 0;
+  box-shadow: 0 0 40px 40px #103260 inset, 0 0 5px 1px #103260;
+}

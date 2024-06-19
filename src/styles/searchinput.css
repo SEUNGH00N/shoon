@@ -1,0 +1,63 @@
+/* main.css */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-input-container {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-product-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #103260;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search-product-button:hover {
+  background-color: #0056b3;
+}
+
+/* 최근 검색어 컨테이너 */
+.recent-searches-container {
+  margin-top: 20px;
+}
+
+/* 최근 검색어 제목 스타일 */
+.recent-searches-container h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* 최근 검색어 목록 스타일 */
+.recent-searches-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 최근 검색어 아이템 스타일 */
+.recent-searches-list li {
+  font-size: 16px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+/* 최근 검색어 아이템 호버 효과 */
+.recent-searches-list li:hover {
+  text-decoration: underline;
+}

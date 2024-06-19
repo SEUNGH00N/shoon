@@ -1,0 +1,501 @@
+/* 입력 창 */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: calc(100% - 20px) !important;
+  padding: 15px !important;
+  border-radius: 5px !important;
+  border: 1.5px solid #b0c4de !important;
+  font-size: 15px !important;
+  box-sizing: border-box !important;
+  margin-top: 10px !important;
+}
+
+/* 파일 선택 창 */
+input[type="file"] {
+  width: calc(100% - 22px) !important;
+  font-size: 13px !important;
+  border-radius: 5px !important;
+  border: 1.5px solid #b0c4de !important;
+  box-sizing: border-box !important;
+  margin: 0 auto !important;
+  margin-top: 10px !important;
+  color: gray !important;
+}
+
+/* 파일 선택 */
+input[type="file"]::file-selector-button {
+  padding: 12px 10px;
+  background-color: #5080c5;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 13px;
+  margin-right: 10px;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+input[type="file"]::file-selector-button:hover {
+  color: #ffffff;
+  outline: 0;
+  box-shadow: 0 0 40px 40px #103260 inset;
+}
+
+.form-group {
+  margin-top: 10px !important;
+  margin-bottom: 20px !important;
+}
+
+/* 모달 */
+.modal-content {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  width: 300px;
+  max-width: 90%;
+  height: auto;
+  opacity: 1;
+}
+
+.modal-close {
+  background-color: #103260;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.modal-close:hover {
+  filter: brightness(0.8)
+}
+
+/*--------------------------------------------------------------------------------*/
+
+/* login.css */
+
+/* 로그인 로고 */
+#login-logo {
+  width: 220px;
+  height: 150px;
+  margin: auto;
+  display: block;
+  margin-top: 50px;
+}
+
+/* 로그인 헤더 */
+.login-header {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+
+/* 로그인 컨테이너 */
+.login-container {
+  max-width: 500px;
+  max-height: 480px;
+  margin: 0 auto;
+  padding: 10px;
+
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+/* 로그인 버튼 */
+.login-button {
+  appearance: none;
+  background-color: #103260;
+  border: 2px solid #103260;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  align-self: center;
+  font-size: 17px;
+  padding: 15px 20px;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  width: 95%;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.login-button:hover {
+  color: #ffffff;
+  outline: 0;
+  box-shadow: 0 0 40px 40px #103260 inset, 0 0 5px 1px #103260;
+}
+
+/* 회원가입 및 찾기 버튼 그룹 */
+.all-group {
+  display: flex;
+  justify-content: center;
+  margin: 0 1.5%;
+  margin-top: 5px;
+}
+
+.all-group button {
+  margin: 0;
+  padding: 15px 20px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  font-size: 17px;
+}
+
+.all-group button:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 2px;
+  background-color: #162b9150;
+  left: 0;
+  top: 25%;
+}
+
+/* 회원가입 및 찾기 버튼 */
+.signup,
+.find-id,
+.find-pw {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  height: min-content;
+}
+
+/* rest 로그인 버튼 */
+.rest-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.rest-group button {
+  margin: 0 10px;
+}
+
+/* 네이버 로그인 버튼 */
+.naver-login {
+  background: url(../image/naver.png) no-repeat center center;
+  background-size: 100% 100%;
+  padding: 25px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 50%;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.naver-login:hover {
+  outline: 0;
+  box-shadow: 0 0 40px 40px #ffffff00 inset, 0 0 5px 1px #03c75a;
+}
+
+/* 카카오 로그인 버튼 */
+.kakao-login {
+  background: url(../image/kakao.png) no-repeat center center;
+  background-size: 100% 100%;
+  padding: 25px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 50%;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.kakao-login:hover {
+  outline: 0;
+  box-shadow: 0 0 40px 40px #ffffff00 inset, 0 0 5px 1px #fee500;
+}
+
+/* 로그인 오류 메세지 */
+.login-failure-message {
+  color: black;
+  text-align: center;
+  margin-top: -14px;
+  margin-bottom: -7px;
+}
+
+/*--------------------------------------------------------------------------------*/
+
+/* signup.css */
+
+/* 회원가입 헤더 */
+.signup-header {
+  font-size: 40px;
+  margin-top: -70px;
+  text-align: center;
+}
+
+/* 회원가입 컨테이너 */
+.signup-container {
+  max-width: 500px;
+  max-height: 700px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 2px solid #162b9150;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* 셀렉트 창 */
+.select-group {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.select-group input,
+.select-group select {
+  width: 230px;
+  height: 45px;
+  font-size: 15px;
+  text-align: left;
+  text-indent: 10px;
+  color: gray;
+  border-radius: 5px;
+  border: 1.5px solid #b0c4de;
+}
+
+/* 입력창 중복확인 그룹 */
+.id-group {
+  display: flex;
+  align-items: center;
+}
+
+/* 학번 입력 창 */
+.id-form {
+  flex: 1;
+}
+
+.id-form input {
+  width: 95%;
+}
+
+.id-group button {
+  margin-left: 10px;
+}
+
+/* 중복 확인 버튼 */
+.check {
+  height: 50px;
+  width: 80px;
+  background-color: #5080c5;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 13px;
+  margin-right: 10px;
+  margin-top: 10px;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.check:hover {
+  color: #ffffff;
+  outline: 0;
+  box-shadow: 0 0 40px 40px #103260 inset;
+}
+
+/* 가입하기 버튼 */
+.signup-button {
+  background-color: #103260;
+  color: #ffffff;
+  border: 2px solid #103260;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+  font-size: 17px;
+  padding: 15px 20px;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  width: 95%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.signup-button:hover {
+  outline: 0;
+  box-shadow: 0 0 40px 40px #103260 inset, 0 0 5px 1px #103260;
+}
+
+/*--------------------------------------------------------------------------------*/
+
+/* findid.css */
+
+/* 아이디 찾기 헤더 */
+.findid-header {
+  font-size: 40px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* 아이디 찾기 컨테이너 */
+.findid-container {
+  max-width: 500px;
+  height: 260px;
+  max-height: 260px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 2px solid #162b9150;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+/* 아이디 찾기 버튼 */
+.findid-button {
+  background-color: #103260;
+  color: #ffffff;
+  border: 2px solid #103260;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+  font-size: 17px;
+  padding: 15px 20px;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  width: 95%;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.findid-button:hover {
+  outline: 0;
+  box-shadow: 0 0 40px 40px #103260 inset, 0 0 5px 1px #103260;
+}
+
+/* 아이디 모달 */
+.found-id {
+  font-size: 19px;
+}
+
+.findid-modal {
+  display: flex;
+  justify-content: center;
+}
+
+.findid-modal button {
+  margin: 0 10px;
+  margin-top: 30px;
+}
+
+/* 로그인 하기 버튼 */
+.findid-login {
+  background-color: #103260;
+  color: #fff;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.findid-login:hover {
+  filter: brightness(0.8)
+}
+
+/* 비밀번호 찾기 버튼 */
+.findid-fwfind {
+  background-color: #103260;
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.findid-fwfind:hover {
+  filter: brightness(0.8)
+}
+
+/*--------------------------------------------------------------------------------*/
+
+/* findpw.css */
+
+/* 비밀번호 찾기 헤더 */
+.findpw-header {
+  font-size: 40px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* 비밀번호 찾기 컨테이너 */
+.findpw-container {
+  max-width: 500px;
+  height: 200px;
+  max-height: 200px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 2px solid #162b9150;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+/* 비밀번호 모달 */
+.found-pw {
+  font-size: 19px;
+}
+
+.pwfind-modal {
+  display: flex;
+  justify-content: center;
+}
+
+.findpw-modal button {
+  margin: 0 10px;
+  margin-top: 30px;
+}
+
+/* 비밀번호 찾기 버튼 */
+.findpw-button {
+  background-color: #103260;
+  color: #ffffff;
+  border: 2px solid #103260;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+  font-size: 17px;
+  padding: 15px 20px;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  width: 95%;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.findpw-button:hover {
+  outline: 0;
+  box-shadow: 0 0 40px 40px #103260 inset, 0 0 5px 1px #103260;
+}
+
+/* 로그인 하기 버튼 */
+.findpw-login {
+  background-color: #103260;
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.findpw-login:hover {
+  filter: brightness(0.8)
+}

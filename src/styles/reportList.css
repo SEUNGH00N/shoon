@@ -1,0 +1,54 @@
+/* reportList.css */
+
+.report-list-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.report-list-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.report-table th,
+.report-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.report-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.report-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.report-table tr:hover {
+  background-color: #ddd;
+}
+
+.report-table td {
+  position: relative;
+}
+
+.report-button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.report-button:hover {
+  background-color: #d32f2f;
+}
