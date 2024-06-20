@@ -1,4 +1,5 @@
 # K' Du-re - 대학생들을 위한 중고거래 플랫폼
+<img src="logo.png" alt="K' Du-re Logo" width="350" height="200">
 
 ![React](https://img.shields.io/badge/Frontend-React-61DAFB?logo=react)
 ![React Native](https://img.shields.io/badge/Frontend-React%20Native-61DAFB?logo=react)
@@ -41,3 +42,7 @@ HTTPS 프로토콜을 지원합니다.
 - **프로젝트 배포**: 도메인 발급 및 빌드된 리액트 프로젝트 배포 및 관리
 - **채팅 기능 구현**: 웹소켓(wss)을 활용한 보안 강화 양방향 웹소켓 통신 환경을 통한 채팅 기능 구현
 - **테이블 구성**: RDBMS(MySQL)의 전반적인 테이블 구성 및 관리
+## 구현화면 (웹)
+https:ec2caps.liroocapstone.shop
+## 구현화면 (앱)
+<img src="readme.png" alt="K' Du-re Logo" width="800" height="500">
