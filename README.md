@@ -43,6 +43,6 @@ HTTPS 프로토콜을 지원합니다.
 - **채팅 기능 구현**: 웹소켓(wss)을 활용한 보안 강화 양방향 웹소켓 통신 환경을 통한 채팅 기능 구현
 - **테이블 구성**: RDBMS(MySQL)의 전반적인 테이블 구성 및 관리
 ## 구현화면 (웹url)
-https://ec2caps.liroocapstone.shop/Main
+https://ec2caps.liroocapstone.shop/
 ## 구현화면 (앱)
 <img src="readme.png" alt="K' Du-re Logo" width="800" height="500">
