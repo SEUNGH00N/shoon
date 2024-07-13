@@ -1,3 +1,4 @@
+# 서버 리팩토링 작업중 : server1
 # K' Du-re - 대학생들을 위한 중고거래 플랫폼
 <img src="logo.png" alt="K' Du-re Logo" width="350" height="200">
 
