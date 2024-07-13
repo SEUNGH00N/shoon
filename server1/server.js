@@ -13,6 +13,9 @@ const messageRoutes = require('./routes/messageRoutes');
 const chatRoomRoutes = require('./routes/chatRoomRoutes');
 const productRoutes = require('./routes/productRoutes');
 const messageController = require('./controllers/messageController');
+const searchHistoryRoutes = require('./routes/searchHistoryRoutes');
+
+
 
 // 미들웨어 설정
 app.use(cors()); // 모든 도메인에서의 요청을 허용
@@ -23,6 +26,7 @@ app.use('/users', userRoutes);
 app.use('/messages', messageRoutes);
 app.use('/chatRooms', chatRoomRoutes);
 app.use('/product', productRoutes);
+app.use('/searchHistory', searchHistoryRoutes);
 
 // 서버 포트 설정
 const PORT = process.env.PORT || 4000;
