@@ -1,6 +1,6 @@
 const pool = require('../config/db');
 
-const Product = {
+const productModel = {
     /**
      * 모든 상품을 가져오는 메서드
      * @returns {Promise<Array>} 모든 상품 목록
@@ -67,4 +67,4 @@ const Product = {
     }
 };
 
-module.exports = Product;
+module.exports = productModel;
