@@ -1,5 +1,5 @@
 # 서버 리팩토링 작업중 : server -> server1
-  - 사용자 (user) mvc 구조 작업 60% 완료 (#todo ~0717)
+  - 사용자 (user) mvc 구조 작업 완료
   - 상품, 검색 (product, search) mvc 구조 작업 30% 완료 (#todo ~0720)
   - 채팅, 메세지 ( chat, message) mvc 구조작업 20% 완료 (#todo ~0731)
   - #todo 결제 (payment) mvc 구조작업 진행 예정 (~0731)
