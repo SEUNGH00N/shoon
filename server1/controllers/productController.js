@@ -37,10 +37,10 @@ const productController = {
      * @desc 특정 사용자의 상품 목록 조회
      * @access Public
      */
-    getProductsByUserId: async (req, res) => {
-        const userId = req.params.userId;
+    getProductsByUser: async (req, res) => {
+        const userId = req.headers.user_id; // 사용자 ID는 요청 헤더에서 가져옵니다.
         try {
-            const products = await productService.getProductsByUserId(userId);
+            const products = await productService.getUserProducts(userId);
             res.json(products);
         } catch (error) {
             console.error('Error fetching products by user ID:', error);
@@ -75,8 +75,10 @@ const productController = {
      */
     deleteProductById: async (req, res) => {
         const productId = req.params.productId;
+        const userId = req.header('user_id');
+
         try {
-            await productService.deleteProductById(productId);
+            await productService.deleteUserProduct(productId, userId);
             res.sendStatus(200);
         } catch (error) {
             console.error('Error deleting product by ID:', error);
@@ -240,7 +242,7 @@ const productController = {
      * @access Public
      */
     getFavorites: async (req, res) => {
-        const userId = req.query.userId;
+        const { userId } = req.params;
         if (!userId) {
             return res.status(400).json({ message: 'User ID is required' });
         }

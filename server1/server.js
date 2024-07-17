@@ -2,20 +2,19 @@
 require('dotenv').config();
 
 const express = require('express');
-const cors = require('cors'); // CORS 패키지 추가
-const http = require('http'); // http 패키지 추가
+const cors = require('cors');
+const http = require('http');
 const socketio = require('socket.io');
-const fs = require('fs'); // 파일 시스템 패키지 추가 (오류 로그 저장을 위해)
+const fs = require('fs').promises;
 
 const app = express();
 const userRoutes = require('./routes/userRoutes');
+const chatRoutes = require('./routes/chatRoutes');
 const messageRoutes = require('./routes/messageRoutes');
-const chatRoomRoutes = require('./routes/chatRoomRoutes');
 const productRoutes = require('./routes/productRoutes');
-const messageController = require('./controllers/messageController');
 const searchHistoryRoutes = require('./routes/searchHistoryRoutes');
-
-
+const ocrRoutes = require('./routes/ocrRoutes');
+const messageController = require('./controllers/messageController');
 
 // 미들웨어 설정
 app.use(cors()); // 모든 도메인에서의 요청을 허용
@@ -23,10 +22,20 @@ app.use(express.json()); // JSON 요청 파싱
 
 // 라우트 설정
 app.use('/users', userRoutes);
-app.use('/messages', messageRoutes);
-app.use('/chatRooms', chatRoomRoutes);
 app.use('/product', productRoutes);
 app.use('/searchHistory', searchHistoryRoutes);
+app.use('/api', ocrRoutes);
+
+// CORS 처리를 위한 미들웨어 추가
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
+// 정적 파일 제공
+app.use('/uploads', express.static('uploads'));
+app.use('/uploads_id', express.static('uploads_id'));
 
 // 서버 포트 설정
 const PORT = process.env.PORT || 4000;
@@ -37,14 +46,17 @@ app.listen(PORT, () => {
 });
 
 // 오류 로그 파일 작성 함수
-function logErrorToFile(error) {
-  const logMessage = `${new Date().toISOString()} - ${error.stack}\n`;
-  fs.appendFile('error.log', logMessage, (err) => {
-    if (err) {
-      console.error('Failed to write to log file:', err);
-    }
-  });
+async function logErrorToFile(error) {
+  // const logMessage = `${new Date().toISOString()} - ${error.stack}\n`;
+  const logMessage = `${new Date().toISOString()} - ${error.message}\n`; // 오류 메시지만 기록하도록 수정
+
+  try {
+    await fs.appendFile('error.log', logMessage);
+  } catch (err) {
+    console.error('Failed to write to log file:', err);
+  }
 }
+
 
 // 소켓 서버 설정
 const socketServer = express();
@@ -54,6 +66,10 @@ const io = socketio(socketServerHttp, {
     origin: '*',
   },
 });
+socketServer.use(cors()); // 모든 도메인에서의 요청을 허용
+socketServer.use(express.json()); // JSON 요청 파싱
+socketServer.use('/chats', messageRoutes);
+socketServer.use('/chats', chatRoutes);
 
 io.on('connection', (socket) => {
   console.log('Client connected');
@@ -62,12 +78,12 @@ io.on('connection', (socket) => {
   socket.on('sendMessage', async (message) => {
     try {
       await messageController.saveMessage(message);
-
       // 모든 클라이언트에 새로운 메시지를 전송
       io.emit('newMessage', message);
     } catch (error) {
       console.error('Error sending message:', error);
-      logErrorToFile(error); // 오류를 로그 파일에 기록
+      logErrorToFile(error);
+
     }
   });
 
@@ -79,6 +95,7 @@ io.on('connection', (socket) => {
 
 // 소켓 서버 포트 설정
 const SOCKET_PORT = process.env.SOCKET_PORT || 4001;
+
 socketServerHttp.listen(SOCKET_PORT, () => {
   console.log(`Socket server is running on port ${SOCKET_PORT}`);
 });

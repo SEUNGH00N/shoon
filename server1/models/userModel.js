@@ -201,6 +201,21 @@ const userModel = {
             console.error('판매된 상품 총 가격 조회 중 오류 발생:', error);
             throw error;
         }
+    },
+    getProductWithSellerInfo: async (productId) => {
+        const connection = await pool.getConnection();
+        try {
+            const [productRows] = await connection.execute(`
+            SELECT p.user_id, u.name, u.rates 
+            FROM products p 
+            INNER JOIN users u ON p.user_id = u.id 
+            WHERE p.id = ?
+          `, [productId]);
+
+            return productRows;
+        } finally {
+            connection.release();
+        }
     }
 };
 

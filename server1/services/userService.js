@@ -250,7 +250,25 @@ const userService = {
     const error = new Error(message);
     error.statusCode = statusCode;
     return error;
-  }
+  },
+
+  getSellerInfo: async (productId) => {
+    try {
+      const productRows = await userModel.getProductWithSellerInfo(productId);
+
+      if (productRows.length === 0) {
+        return null;
+      }
+
+      return {
+        sellerId: productRows[0].user_id,
+        sellerName: productRows[0].name,
+        rates: productRows[0].rates
+      };
+    } catch (error) {
+      throw new Error('상품 정보 조회 오류');
+    }
+  },
 };
 
 module.exports = userService;

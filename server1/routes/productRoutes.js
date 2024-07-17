@@ -34,6 +34,7 @@ router.get('/latest', productController.getAllProducts);
  */
 router.get('/detail/:productId', productController.getProductById);
 
+router.get('/productsmanage', productController.getProductsByUser);
 /**
  * @route GET /views
  * @desc 조회수 순으로 상품 조회
@@ -75,7 +76,7 @@ router.put('/productsmanage/sold/:productId', productController.updateStatusToSo
  * @access Public
  */
 router.put('/productsmanage/:productId', upload.single('image'), productController.updateProduct);
-
+router.delete('/productsmanage/:productId', upload.single('image'), productController.deleteProductById);
 /**
  * @route GET /checkFavorite/:productId
  * @desc 특정 상품 찜 여부 확인
@@ -95,7 +96,7 @@ router.put('/toggleFavorite/:productId', productController.toggleFavorite);
  * @desc 특정 사용자의 찜 목록 조회
  * @access Public
  */
-router.get('/favorites/:userId/:productId', productController.getFavorites);
+router.get('/favorites/:userId', productController.getFavorites);
 
 /**
  * @route POST /ratings

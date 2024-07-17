@@ -1,7 +1,8 @@
+// routes/messageRoutes.js
 const express = require('express');
-const router = express.Router();
 const messageController = require('../controllers/messageController');
+const router = express.Router();
 
-router.get('/:productId', messageController.getMessages);
+router.get('/messages/:productId', messageController.getMessagesByProductId);
 
 module.exports = router;

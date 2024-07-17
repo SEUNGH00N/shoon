@@ -281,6 +281,18 @@ const productModel = {
         `);
         return rows;
     },
+
+    /**
+     * 특정 상품의 조회수를 업데이트하는 메서드
+     * @param {number} productId 상품 ID
+     * @returns {Promise<Object>} 업데이트 결과
+     */
+    updateViews: async (productId) => {
+        const [result] = await pool.query('UPDATE products SET views = views + 1 WHERE id = ?', [productId]);
+        return result;
+    }
+
+
 };
 
 module.exports = productModel;

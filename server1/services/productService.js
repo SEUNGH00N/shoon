@@ -47,6 +47,26 @@ const productService = {
     },
 
     /**
+ * 사용자가 소유한 상품을 삭제하는 메서드
+ * @param {number} productId 상품 ID
+ * @param {number} userId 사용자 ID
+ * @throws {Error} 권한이 없을 경우 'Unauthorized' 에러 발생
+ * @throws {Error} 상품이 존재하지 않을 경우 'Product not found' 에러 발생
+ */
+    deleteUserProduct: async (productId, userId) => {
+        const product = await productModel.getById(productId);
+        if (!product) {
+            throw new Error('Product not found');
+        }
+        if (product.user_id !== userId) {
+            throw new Error('Unauthorized');
+        }
+        
+        await productModel.deleteById(productId);
+    },
+
+
+    /**
      * 상품을 추가하는 메서드
      * @param {number} userId 사용자 ID
      * @param {string} name 상품 이름
