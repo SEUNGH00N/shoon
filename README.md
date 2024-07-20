@@ -1,3 +1,4 @@
+# CI/CD 레포지토리 작업중
 # 서버 리팩토링 작업중 : server -> server1
   - 사용자 (user) mvc 구조 작업 완료
   - 상품, 검색 (product, search) mvc 구조 작업 30% 완료 (#todo ~0720)
