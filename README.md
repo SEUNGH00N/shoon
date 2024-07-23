@@ -13,6 +13,7 @@
 # K' Du-re - 대학생들을 위한 중고거래 플랫폼
 <img src="logo.png" alt="K' Du-re Logo" width="350" height="200">
 
+# 활용 기술스택
 ![React](https://img.shields.io/badge/Frontend-React-61DAFB?logo=react)
 ![React Native](https://img.shields.io/badge/Frontend-React%20Native-61DAFB?logo=react)
 ![Node.js](https://img.shields.io/badge/Backend-Node.js-339933?logo=nodedotjs)
