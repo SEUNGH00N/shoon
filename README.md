@@ -1,3 +1,6 @@
+![header](https://capsule-render.vercel.app/api?type=wave&color=gradient&height=350&section=header&text=H00N's_Repo!&fontSize=80&fontColor=fff&fontAlign=50)
+
+
 # CI/CD 레포지토리 작업중
 # 서버 리팩토링 작업중 : server -> server1
   - 사용자 (user) mvc 구조 작업 완료
