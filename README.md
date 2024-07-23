@@ -8,6 +8,7 @@
 
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=SEUNGH00N&show_icons=true&theme=merko&locale=kr)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SEUNGH00N&theme=merko&layout=compact&locale=kr)](https://github.com/anuraghazra/github-readme-stats)
     
 # K' Du-re - 대학생들을 위한 중고거래 플랫폼
 <img src="logo.png" alt="K' Du-re Logo" width="350" height="200">
