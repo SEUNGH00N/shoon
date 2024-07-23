@@ -5,6 +5,9 @@
   - 채팅, 메세지 ( chat, message) mvc 구조작업 20% 완료 (#todo ~0731)
   - #todo 결제 (payment) mvc 구조작업 진행 예정 (~0731)
   - #todo 학생증 인증 (Google Vision ocr) mvc 구조작업 진행 예정 (~0731)
+
+
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=SEUNGH00N&show_icons=true&theme=merko&locale=kr)
     
 # K' Du-re - 대학생들을 위한 중고거래 플랫폼
 <img src="logo.png" alt="K' Du-re Logo" width="350" height="200">
