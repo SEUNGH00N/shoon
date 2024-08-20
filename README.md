@@ -1,15 +1,5 @@
 ![header](https://capsule-render.vercel.app/api?type=wave&color=gradient&height=350&section=header&text=H00N's_Repo!&fontSize=80&fontColor=fff&fontAlign=50)
 
-
-# CI/CD 레포지토리 작업중
-# 서버 리팩토링 작업중 : server -> server1
-  - 사용자 (user) mvc 구조 작업 완료
-  - 상품, 검색 (product, search) mvc 구조 작업 30% 완료 (#todo ~0720)
-  - 채팅, 메세지 ( chat, message) mvc 구조작업 20% 완료 (#todo ~0731)
-  - #todo 결제 (payment) mvc 구조작업 진행 예정 (~0731)
-  - #todo 학생증 인증 (Google Vision ocr) mvc 구조작업 진행 예정 (~0731)
-
-
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=SEUNGH00N&show_icons=true&theme=merko&locale=kr)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SEUNGH00N&theme=merko&layout=compact&locale=kr)](https://github.com/anuraghazra/github-readme-stats)
     
